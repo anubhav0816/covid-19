@@ -1,14 +1,14 @@
 const request = require('request')
-
-
 const cases = (callback)=>{
+   
     const url ='https://api.covid19india.org/data.json'
+   
     request({url:url,json:true},(error,{body})=>{
+   
         if(error){
             callback('unable to connect with server',undefined)
         }
         else{
-            console.log(body.cases_time_series[0].totalconfirmed)
             k=body.cases_time_series.length,
             m=k-1,
             callback(undefined,{
@@ -22,4 +22,4 @@ const cases = (callback)=>{
     })
 }
 
-module.exports=cases
+module.exports = cases
