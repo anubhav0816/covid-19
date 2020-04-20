@@ -6,7 +6,7 @@ const todayconfirmed = document.querySelector('#today-confirmed')
 const todayrecover = document.querySelector('#today-recovered')
 const search = document.querySelector('input')
 
-fetch('http://localhost:3000/').then((response)=>{
+fetch('http://localhost:3000/cases').then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             totalconfirmed.textContent="Loading... "

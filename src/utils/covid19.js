@@ -12,7 +12,7 @@ const cases = (callback)=>{
             k=body.cases_time_series.length,
             m=k-1,
             callback(undefined,{
-                totalConfirmed: body.cases_time_series[m].totalconfirmed,
+                totalconfirmed: body.cases_time_series[m].totalconfirmed,
                 totalrecovered: body.cases_time_series[m].totalrecovered,
                 todayconfirmed: body.cases_time_series[m].dailyconfirmed,
                 todayrecovered: body.cases_time_series[m].dailydeceased,

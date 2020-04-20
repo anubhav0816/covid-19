@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
-// const hbs = require('hbs')
-const cases = require('./utils/covid19')
+const cases = require('../src/utils/covid19')
 // seting port
 
 const app = express()
@@ -16,10 +15,12 @@ app.set('views',viewsPath)
 app.use(express.static(publicDirectoryPath))
   
 app.get('',(req,res)=>{
-    cases((error,body)=>{
-        console.log(body)
-    })
     res.render('index')
+})
+app.get('/cases',(req,res)=>{
+    cases((err,data)=>{
+    res.send(data)
+    })
 })
 
 
