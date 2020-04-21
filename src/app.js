@@ -1,6 +1,10 @@
 const express = require('express')
 const path = require('path')
-const cases = require('../src/utils/covid19')
+// const hbs = require('hbs')
+const cases = require('./utils/covid19')
+const stateCase = require('./utils/covid-19-state')
+
+
 // seting port
 
 const app = express()
@@ -13,7 +17,7 @@ app.set('view engine','hbs')
 app.set('views',viewsPath)
 
 app.use(express.static(publicDirectoryPath))
-  
+
 app.get('',(req,res)=>{
     res.render('index')
 })
@@ -23,7 +27,15 @@ app.get('/cases',(req,res)=>{
     })
 })
 
+app.get('/state',(req,res)=>{
+    const state=req.query.search
+    stateCase('state',(err,datas)=>{
+        // console.log('data')
+        res.send(datas)
+    })
+})
+
 
 app.listen(port,()=>{
     console.log("server is set")
-})
+})  

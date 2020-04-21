@@ -21,5 +21,4 @@ const cases = (callback)=>{
         }
     })
 }
-
-module.exports = cases
+module.exports=cases
