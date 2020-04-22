@@ -1,12 +1,11 @@
 .wrapper {
     display: flex;
-    height: 500px;
+    height: 70%;
     background-color: rgba(5, 41, 56, 0.692);
     flex-direction: row;
     flex-flow: row wrap;
     overflow: hidden;
     width: 100%;
-  
   }
   .slider_title{
     width: 500px;
@@ -19,7 +18,7 @@
     font-family: 'Oswald', sans-serif;
     color: black;
     flex-flow: column;
-    padding-left: 116px;
+    padding-left: 170px;
   }
   .wrapper .slider_title p{
     font-size: 25px;
