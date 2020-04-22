@@ -46,7 +46,7 @@ stateForm.addEventListener('submit',(e)=>{
                confirmed.textContent='Unable to find'
             }
             else{
-                console.log('confirmed')
+                console.log(datas)
                 confirmed.textContent='Confirmed:-'+datas.confirmed
                 active.textContent='Active:-'+datas.active
                 recovered.textContent='Recovered:-'+datas.recovered

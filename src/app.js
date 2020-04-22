@@ -22,18 +22,17 @@ app.get('',(req,res)=>{
     res.render('index')
 })
 app.get('/cases',(req,res)=>{
+    const state=req.query.search
+    if(state){
+    stateCase(state,(err,datas)=>{
+        res.send(datas)
+    })}
+    else{
     cases((err,data)=>{
     res.send(data)
-    })
+    })}
 })
 
-app.get('/state',(req,res)=>{
-    const state=req.query.search
-    stateCase('state',(err,datas)=>{
-        // console.log('data')
-        res.send(datas)
-    })
-})
 
 
 app.listen(port,()=>{
