@@ -11,7 +11,7 @@ const active = document.querySelector('#message-2')
 const recovered = document.querySelector('#message-3')
 const deaths = document.querySelector('#message-4')
 
-fetch('http://localhost:3000/cases').then((response)=>{
+fetch('/cases').then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             totalconfirmed.textContent="Loading... "
@@ -40,7 +40,7 @@ stateForm.addEventListener('submit',(e)=>{
 
     console.log(state)
 
-    fetch('http://localhost:3000/cases?search='+ state).then((response)=>{
+    fetch('/cases?search='+ state).then((response)=>{
         response.json().then((datas)=>{
             if(datas.error){
                confirmed.textContent='Unable to find'

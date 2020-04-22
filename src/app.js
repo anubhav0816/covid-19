@@ -33,6 +33,13 @@ app.get('/cases',(req,res)=>{
     })}
 })
 
+// app.get('http://localhost:3000/?search=',(req,res)=>{
+//     const state=req.query.search
+//     stateCase('state',(err,datas)=>{
+//         // console.log('data')
+//         res.send(datas)
+//     })
+// })
 
 
 app.listen(port,()=>{
