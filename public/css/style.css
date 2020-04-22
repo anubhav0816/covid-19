@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    height: auto;
+    height: 80%;
     background-color: rgba(5, 41, 56, 0.692);
     flex-direction: row;
     flex-flow: row wrap;
